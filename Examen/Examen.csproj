@@ -68,6 +68,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\EmpleadosBLL.cs" />
+    <Compile Include="DAL\EmpleadosDb.cs" />
+    <Compile Include="Entidades\Empleados.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +79,19 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Consultas\EmpleadosConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\EmpleadosConsulta.Designer.cs">
+      <DependentUpon>EmpleadosConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\EmpleadosRegistroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\EmpleadosRegistroForm.Designer.cs">
+      <DependentUpon>EmpleadosRegistroForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilidades.cs" />
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,6 +104,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\Consultas\EmpleadosConsulta.resx">
+      <DependentUpon>EmpleadosConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\EmpleadosRegistroForm.resx">
+      <DependentUpon>EmpleadosRegistroForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -102,21 +124,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataBase\DataBase.sql" />
-    <Content Include="DataBase\PrimerParcialDb.mdf">
+    <Content Include="DataBase\EmpleadosDb.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="DataBase\PrimerParcialDb_log.ldf">
+    <Content Include="DataBase\EmpleadosDb_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>PrimerParcialDb.mdf</DependentUpon>
+      <DependentUpon>EmpleadosDb.mdf</DependentUpon>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BLL\" />
-    <Folder Include="DAL\" />
-    <Folder Include="Entidades\" />
-    <Folder Include="UI\Consultas\" />
-    <Folder Include="UI\Registros\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
       <Visible>False</Visible>
